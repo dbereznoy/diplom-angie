@@ -1,2 +1,2 @@
 flowchart TB
-  node
+  node[Текст в узле]
