@@ -27,7 +27,8 @@ graph TD;
     Database[("Database (PostgreSQL)
     ▸ Пользователи
     ▸ Сессии
-    ▸ История сообщений")];
+    ▸ История сообщений
+    + Redis для горизонтального масштабирования")];
     
     style Frontend fill:#4CAF50,color:white
     style Backend1 fill:#2196F3,color:white
