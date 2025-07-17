@@ -36,7 +36,6 @@ graph TD;
 ```
 
 ## Решение по балансировке нагрузки с указанием директив конфигурации
-
 ```nginx
 upstream chat-upstream {
   server backend1:3000;
@@ -68,7 +67,7 @@ upstream chat-upstream {
 
 ## Защита от DoS-атак
 
-### 1. Таймауты против 
+### 1. Таймауты против Slowloris
 ```nginx
 client_body_timeout 5s;
 client_header_timeout 5s;
