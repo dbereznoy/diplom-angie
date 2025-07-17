@@ -18,7 +18,7 @@ flowchart TD
     end
 
     subgraph База данных
-        Backend1 DB["PostgreSQL"]       
+        Backend1 DB
     end
 
     style Angie fill:#4CAF50,color:white
