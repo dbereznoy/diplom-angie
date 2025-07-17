@@ -1,12 +1,4 @@
-```mermaid
-graph TD;
-    Client1-->Frontend;
-    Client2-->Frontend;
-    Frontend-->Backend1;
-    Frontend-->Backend2;
-    Backend1-->Database;
-    Backend2-->Database;
-```
+
 ```mermaid
 graph TD;
     Client1[Браузер 1] -->|HTTPS/WSS| Frontend;
@@ -21,12 +13,10 @@ graph TD;
     Frontend -->|WebSocket| Backend2;
     
     Backend1["Backend 1 (Node.js)
-    ▸ WebSocket
     ▸ JWT-аутентификация
     ▸ Логика чата"];
     
     Backend2["Backend 2 (Node.js)
-    ▸ WebSocket
     ▸ JWT-аутентификация
     ▸ Логика чата"];
     
