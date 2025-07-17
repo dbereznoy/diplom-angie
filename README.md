@@ -18,7 +18,7 @@ flowchart TD
     end
 
     subgraph База данных
-        Backend1 -->|SELECT/INSERT| DB[(("PostgreSQL\n• (Пользователи, Сессии, История сообщений)"))]       
+        Backend1 DB["PostgreSQL"]       
     end
 
     style Angie fill:#4CAF50,color:white
