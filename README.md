@@ -1,7 +1,8 @@
 flowchart TD
     subgraph Клиенты
         A[Браузер 1] -->|HTTPS/WSS| Angie
-        B[Браузер 2] -->|HTTPS/WSS| Angie       
+        B[Браузер 2] -->|HTTPS/WSS| Angie
+        C[Мобильное приложение] -->|HTTPS/WSS| Angie
     end
 
     subgraph Фронтенд
@@ -16,7 +17,8 @@ flowchart TD
     end
 
     subgraph База данных
-        Database -->|SELECT/INSERT| DB[(("PostgreSQL\n• Пользователи\n• Сессии\n• История сообщений")) ]
+        Backend1 -->|SELECT/INSERT| DB[(("PostgreSQL/MySQL\n• Пользователи\n• Сессии\n• История сообщений"))]
+        Backend2 -->|SELECT/INSERT| DB
     end
 
     style Angie fill:#4CAF50,color:white
