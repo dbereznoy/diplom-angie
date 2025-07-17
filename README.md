@@ -13,13 +13,12 @@ flowchart TD
     end
 
     subgraph Бэкенд-серверы["Бэкенд-серверы (Node.js)"]
-        Backend1["Бэкенд 1\n• WebSocket\n• JWT-аутентификация\n• Логика чата"]
+        Backend1["Бэкенд 1\n• ((WebSocket\n• JWT-аутентификация\n• Логика чата)"]
         Backend2["Бэкенд 2\n• WebSocket\n• JWT-аутентификация\n• Логика чата"]
     end
 
     subgraph База данных
-        Backend1 -->|SELECT/INSERT| DB[(("PostgreSQL/MySQL\n• Пользователи\n• Сессии\n• История сообщений"))]
-        Backend2 -->|SELECT/INSERT| DB
+        Backend1 -->|SELECT/INSERT| DB[(("PostgreSQL\n• (Пользователи, Сессии, История сообщений)"))]       
     end
 
     style Angie fill:#4CAF50,color:white
