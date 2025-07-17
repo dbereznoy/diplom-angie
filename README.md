@@ -1,5 +1,14 @@
 ```mermaid
 graph TD;
+    Client1-->Frontend;
+    Client2-->Frontend;
+    Frontend-->Backend1;
+    Frontend-->Backend2;
+    Backend1-->Database;
+    Backend2-->Database;
+```
+```mermaid
+graph TD;
     Client1[Браузер 1] -->|HTTPS/WSS| Frontend;
     Client2[Браузер 2] -->|HTTPS/WSS| Frontend;
     
@@ -21,24 +30,16 @@ graph TD;
     ▸ JWT-аутентификация
     ▸ Логика чата"];
     
-    Backend1 -->|Чтение/запись| Redis;
-    Backend2 -->|Чтение/запись| Redis;
-    
-    Redis["Redis
-    ▸ Кеш сессий
-    ▸ Активные подключения
-    ▸ Временные данные"];
-    
-    Redis -->|Синхронизация| Database;
+    Backend1 -->|SELECT/INSERT| Database;
+    Backend2 -->|SELECT/INSERT| Database;
     
     Database[("Database (PostgreSQL)
     ▸ Пользователи
-    ▸ История сообщений
-    ▸ Персистентные данные"];
+    ▸ Сессии
+    ▸ История сообщений")];
     
     style Frontend fill:#4CAF50,color:white
     style Backend1 fill:#2196F3,color:white
     style Backend2 fill:#2196F3,color:white
-    style Redis fill:#E53935,color:white
     style Database fill:#FF9800,color:white
 ```
