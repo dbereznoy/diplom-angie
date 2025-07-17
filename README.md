@@ -1,8 +1,8 @@
 
 ```mermaid
 graph TD;
-    Client1[Браузер 1] -->|HTTPS/WSS| Frontend;
-    Client2[Браузер 2] -->|HTTPS/WSS| Frontend;
+    Client1[клиент 1] -->|HTTPS/WSS| Frontend;
+    Client2[клиент 2] -->|HTTPS/WSS| Frontend;
     
     Frontend["Frontend (Angie)
     ▸ Балансировка нагрузки
