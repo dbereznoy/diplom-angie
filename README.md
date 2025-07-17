@@ -17,9 +17,7 @@ flowchart TD
         Backend2["Бэкенд 2\n• WebSocket\n• JWT-аутентификация\n• Логика чата"]
     end
 
-    subgraph База данных
-        Backend1 DB
-    end
+
 
     style Angie fill:#4CAF50,color:white
     style Backend1 fill:#2196F3,color:white
