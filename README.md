@@ -92,16 +92,13 @@ limit_req_zone $binary_remote_addr zone=ws_req_ip:10m rate=30r/s;
 limit_req zone=ws_req_ip burst=40 nodelay;
 limit_conn conn_per_ip 10;
 ```
-Настройка	Тип трафика	Лимит	burst	Назначение
-limit_conn_zone + conn_per_ip	TCP/WS	10 соединений/IP	–	Защита от перегрузки соединений
-limit_req_zone + req_per_ip	HTTP	10 запросов/сек/IP	20	Защита REST API
-limit_req_zone + ws_req_ip	WebSocket	30 сообщений/сек/IP	40	Безопасность чата без лагов
+
 
 | Настройка                     | Тип трафика   | Лимит             | burst | Назначение                      |
 |------------------------------|---------------|-------------------|-------|--------------------------------|
 | limit_conn_zone + conn_per_ip | TCP/WS        | 10 соединений/IP  | –     | Защита от перегрузки соединений |
 | limit_req_zone + req_per_ip   | HTTP          | 10 запросов/сек/IP| 20    | Защита REST API                |
-| limit_req_zone + ws_req_ip    | WebSocket     | 30 сообщений/сек/IP| 40    | Безопасность чата без лагов    |
+| limit_req_zone + ws_req_ip    | WebSocket     | 30 сообщений/сек/IP| 40    | Отдельный лимит для WebSocket-сообщений   |
 
 
 ### 3. Фильтрация угроз
