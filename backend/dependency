@@ -1,0 +1,17 @@
+npm install ws jsonwebtoken pg bcryptjs redis cookie dotenv --save && npm install nodemon --save-dev
+
+ws - WebSocket сервер
+
+jsonwebtoken - работа с JWT токенами
+
+pg - драйвер PostgreSQL
+
+bcryptjs - хеширование паролей
+
+redis - клиент Redis для горизонтального масштабирования
+
+cookie - работа с cookies
+
+dotenv - загрузка переменных окружения из .env файла
+
+nodemon (dev) - автоматический перезапуск сервера при изменениях
