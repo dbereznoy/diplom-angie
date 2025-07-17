@@ -1,2 +1,7 @@
-flowchart TB
-  node[Текст в узле]
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
